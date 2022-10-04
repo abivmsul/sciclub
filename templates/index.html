@@ -1,21 +1,25 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Science Club</title>
-    <link rel="icon" href="img/icon-01.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/queries.css" />
+    <link
+      rel="icon"
+      href="{% static 'img/icon-01.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/general.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/queries.css' %}" />
 
-    <script defer src="js/script.js"></script>
+    <script defer src="{% static 'js/script.js' %}"></script>
   </head>
   <body>
     <header class="header">
-      <a href="#">
-        <img class="logo" src="img/logo-02.png" alt="" />
+      <a href="">
+        <img class="logo" src="{% static 'img/logo-02.png' %}" alt="" />
       </a>
       <nav class="main-nav">
         <ol class="main-nav-list">
@@ -40,17 +44,17 @@
             >
           </li>
           <li>
-            <a class="main-nav-link nav-resume" href="register.html">Register</a>
+            <a class="main-nav-link nav-resume" href="{% url 'register' %}"
+              >Register</a
+            >
           </li>
         </ol>
       </nav>
 
-      
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
-
     </header>
 
     <div orientation="left" class="left-side-nav">
@@ -87,7 +91,7 @@
     </div>
 
     <section class="section-hero">
-      <div class=" hero">
+      <div class="hero">
         <div class="hero-text">
           <div class="heading-1">
             <h1>Hi, Welcome To</h1>
@@ -109,10 +113,14 @@
         </div>
         <div class="hero-img-box">
           <picture>
-            <source srcset="img/astro.svg" type="image/webp" />
-            <source srcset="img/astro.svg" type="image/png" />
+            <source srcset="{% static 'img/astro.svg' %}" type="image/webp" />
+            <source srcset="{% static 'img/astro.svg' %}" type="image/png" />
 
-            <img src="img/astro.svg" class="hero-img" alt="An svg of space" />
+            <img
+              src="{% static 'img/astro.svg' %}"
+              class="hero-img"
+              alt="An svg of space"
+            />
           </picture>
         </div>
       </div>
@@ -125,7 +133,11 @@
         </h2>
         <div class="inner">
           <div class="">
-            <img class="inner-img" src="img/hello.svg" alt="image" />
+            <img
+              class="inner-img"
+              src="{% static 'img/hello.svg' %}"
+              alt="image"
+            />
           </div>
           <div class="inner-div">
             <div class="inner-text">
@@ -175,7 +187,6 @@
               </li>
             </ul>
           </div>
-          
         </div>
       </div>
     </section>
@@ -187,7 +198,7 @@
         </h2>
         <div class="containerr grid grid--2-cols margin-bottom-md">
           <div class="dept">
-            <img src="img/b.jpg" class="dept-img" alt="" />
+            <img src="{% static 'img/b.jpg' %}" class="dept-img" alt="" />
             <div class="dept-content">
               <p class="feature-title">Science & Technolgy</p>
               <ul class="dept-attributes">
@@ -211,7 +222,7 @@
           </div>
 
           <div class="dept">
-            <img src="img/b.jpg" class="dept-img" alt="" />
+            <img src="{% static 'img/b.jpg' %}" class="dept-img" alt="" />
             <div class="dept-content">
               <p class="feature-title">Computer Programming</p>
               <ul class="dept-attributes">
@@ -247,7 +258,7 @@
         </h2>
         <div class="project-list-1">
           <div class="project-img-right">
-            <img src="img/b.jpg" alt="project image" />
+            <img src="{% static 'img/b.jpg' %}" alt="project image" />
           </div>
           <div class="project-text-right">
             <p class="feature">Featured Project</p>
@@ -290,12 +301,12 @@
             ></a>
           </div>
           <div class="project-img-left">
-            <img src="img/c.jpg" alt="project image" />
+            <img src="{% static 'img/c.jpg' %}" alt="project image" />
           </div>
         </div>
         <div class="project-list-1">
           <div class="project-img-right">
-            <img src="img/a.jpg" alt="project image" />
+            <img src="{% static 'img/a.jpg' %}" alt="project image" />
           </div>
           <div class="project-text-right">
             <p class="feature">Featured Project</p>
@@ -331,7 +342,7 @@
             <img
               class="coordinator-img"
               alt="Picture of Tedi"
-              src="img/benji.JPG"
+              src="{% static 'img/benji.JPG' %}"
             />
             <p class="coordinator-name">&mdash; Tedi</p>
             <blockquote class="coordinator-text">
@@ -344,7 +355,7 @@
             <img
               class="coordinator-img"
               alt="Picture of Sami"
-              src="img/benji.JPG"
+              src="{% static 'img/benji.JPG' %}"
             />
             <p class="coordinator-name">&mdash; Sami</p>
             <blockquote class="coordinator-text">
@@ -357,7 +368,7 @@
             <img
               class="coordinator-img"
               alt="Picture of abdu"
-              src="img/benji.JPG"
+              src="{% static 'img/benji.JPG' %}"
             />
             <p class="coordinator-name">&mdash; Abdu</p>
             <blockquote class="coordinator-text">
@@ -374,14 +385,14 @@
         <h2 class="sub-title">What are You waiting for</h2>
 
         <h2 class="contact-title">Become A Member Now!</h2>
-        <a href="register.html" class="btn btn-link"> Register</a>
+        <a href="{% url 'register' %}" class="btn btn-link"> Register</a>
       </div>
     </section>
     <footer class="footer">
       <div class="flex">
         <div class="logo-col">
-          <a href="#" class="footer-logo">
-            <img class="logo" src="img/logo-02.png" alt="" />
+          <a href="" class="footer-logo">
+            <img class="logo" src="{% static 'img/logo-02.png' %}" alt="" />
           </a>
 
           <p class="copyright">
@@ -408,31 +419,33 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    } // End if
-  });
-});
-</script>
+    </script>
   </body>
 </html>

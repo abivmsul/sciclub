@@ -11,7 +11,6 @@ body {
   color: #64ffda;
 }
 
-
 .btnn,
 .btnn:link,
 .btnn:visited {
@@ -47,11 +46,13 @@ body {
   /* Trick to add border inside */
   /* box-shadow: inset 0 0 0 3px #fff; */
 }
-.form-control,.form-select:active{
+.form-control,
+.form-select:active {
   background-color: #0a192f;
   color: aliceblue;
 }
-.form-control:active,.form-select{
+.form-control:active,
+.form-select {
   background-color: #0a192f;
   color: aliceblue;
 }
