@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ss.css" /> 
+</head>
+<body>
+  
+  <section id="section-newsletter" class="py-5">
+    <div class="container">
+      <form class="text-white" action="#">
+        <h2 class="display-4 heading-1 text-center">Become A Member</h2>
+        <p class="lead text-center">It's easy, just fill the following form and hit Register button</p>
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="fname" class="form-label heading-1">First Name *</label>
+              <input type="text" class="form-control" placeholder="Your Name" id="fname" required>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="inputSelect" class="form-label heading-1">Middle Name *</label>
+              <input type="text" class="form-control" placeholder="Your Father Name" id="input-name" required>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="inputSelect" class="form-label heading-1">Last Name *</label>
+              <input type="text" class="form-control" placeholder="Your Grand Father Name" id="input-name" required>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+          <div class="mb-3">
+          <label for="inputSelect" class="form-label">Gender *</label>
+          <select class="form-select" aria-label="Default select" id="inputSelect" required>
+          <option value="">-- Select Your Gender --</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          </select>
+      </div>
+          </div>
+        </div> -->
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="inputSelect" class="form-label heading-1" >Gender *</label>
+              <div class="input-group">
+                
+                <span class="input-group-text" id="select">Options</span>
+                <select class="form-select " aria-label="Default select" aria-describedby="select"  required>
+                  <option value="">-- Select Your Gender --</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div></div>
+          </div>
+        </div>
+        
+
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="age" class="form-label heading-1">Age *</label>
+              <input type="number" class="form-control" placeholder="Insert Your Age here" id="age" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div class="col-10  col-sm-6 col-md-6 col-lg-6">
+            <div class="mb-3">
+              <label for="inputSelect" class="form-label heading-1">Department *</label>
+              <div class="input-group">
+                
+                <span class="input-group-text" id="select">Options</span>
+                <select class="form-select" aria-label="Default select" aria-describedby="select"  required>
+                  <option value="">-- Select Department --</option>
+                  <option value="male">Science and technology</option>
+                  <option value="female">Computer</option>
+                </select>
+              </div></div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="mb-3">
+              <label for="input-name" class="visually-hidden">Your name:</label>
+              <input type="text" class="form-control" placeholder="Firstname Lastname" id="input-name" required>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6">
+            <div class="mb-3">
+              <label for="input-email" class="visually-hidden">Your email:</label>
+              <input type="email" class="form-control" placeholder="mail@example.com" id="input-email" required>
+            </div>
+          </div>
+        </div> -->
+        
+        <div class="d-grid col-3  mb-2 mx-auto">
+          <button type="submit" class="btn btnn-link">Register</button>
+        </div>
+        <div class="d-grid col-2  mb-2 mx-auto">
+          <a href="index.html" class="btn btn-secondary">Cancel</a>
+        </div>
+        <!-- <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-success">Register</button>
+        </div> -->
+      </form>
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/smooth-scroll.min.js"></script>
+		<script>
+			var scroll = new SmoothScroll('a[href*="#section-"]', {
+        offset: 56
+      });
+		</script>
+</body>
+</html>
