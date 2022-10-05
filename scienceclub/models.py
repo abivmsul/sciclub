@@ -14,4 +14,4 @@ class Student(models.Model):
     idea = models.TextField()
        
     def __str__(self):
-         return f"{self.fname} of grade {self.grade}"
+         return f"{self.fname} from {self.grade}"
