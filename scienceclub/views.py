@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.shortcuts import render,get_object_or_404,redirect
+from .models import Student
 # Create your views here.
 
 def home(request):
@@ -9,28 +10,25 @@ def home(request):
 def register(request):
 
   if request.method == 'POST':
-      messages.success(request, 'You have successfully registerd!')
+      # fname = request.POST.get('fname')
+      # lname = request.POST.get('lname')
+      # mname = request.POST.get('mname')
+      # age = request.POST.get('age')
+      # gender = request.POST.get('gender')
+      # grade = request.POST.get('grade')
+      # department = request.POST.get('dept')
+      # idea = request.POST.get('idea')
+
+      student = Student.objects.create()    
+      student.fname = request.POST.get('fname')
+      student.lname = request.POST.get('lname')
+      student.mname = request.POST.get('mname')
+      student.age = request.POST.get('age')
+      student.gender = request.POST.get('gender')
+      student.grade = request.POST.get('grade')
+      student.department = request.POST.get('dept')
+      student.idea = request.POST.get('idea')
+      student.save()      
+      messages.success(request, 'Thank You, You have successfully registerd! we will inform you shortly if you are Accepted or Not')
       return redirect('register')     
-        # username = request.POST['username']
-        # password = request.POST['password']
-
-        # user = auth.authenticate(username=username, password=password)
-
-        # if user is not None:
-        #     auth.login(request, user)
-        #     messages.success(request, 'You are now logged in')
-        #     if request.user.groups.filter(name='Researcher').exists():
-        #         return redirect('researcherhome')
-        #     elif request.user.groups.filter(name='Custodian').exists():
-        #         return redirect('custodianhome')
-        #     elif request.user.groups.filter(name='Department').exists():
-        #         return redirect('departmenthome')
-        #     elif request.user.groups.filter(name='Director').exists():
-        #         return redirect('directorhome')
-        #     else:
-        #         messages.warning(request, 'Invalid credentials')
-        #         return redirect('login')
-    
-
-
   return render(request, 'register.html')

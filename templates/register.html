@@ -13,7 +13,13 @@
   <body>
     <section id="section-newsletter" class="py-5">
       <div class="container">
-        <form method="post" class="text-white" action="{% url 'register' %}">
+        <form
+          method="post"
+          class="text-white"
+          action="{% url 'register' %}"
+          enctype="multipart/form-data"
+          validate
+        >
           {% csrf_token %}
           <h2 class="display-4 heading-1 text-center">Become A Member</h2>
           <p class="lead text-center">
@@ -31,6 +37,7 @@
                   class="form-control"
                   placeholder="Your Name"
                   id="fname"
+                  name="fname"
                   required
                 />
               </div>
@@ -39,14 +46,15 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
+                <label for="mname" class="form-label heading-1"
                   >Middle Name *</label
                 >
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Your Father Name"
-                  id="input-name"
+                  id="mname"
+                  name="mname"
                   required
                 />
               </div>
@@ -55,14 +63,15 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
+                <label for="lname" class="form-label heading-1"
                   >Last Name *</label
                 >
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Your Grand Father Name"
-                  id="input-name"
+                  id="lname"
+                  name="lname"
                   required
                 />
               </div>
@@ -71,7 +80,7 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
+                <label for="gender" class="form-label heading-1"
                   >Gender *</label
                 >
                 <div class="input-group">
@@ -80,6 +89,8 @@
                     class="form-select"
                     aria-label="Default select"
                     aria-describedby="select"
+                    name="gender"
+                    id="gender"
                     required
                   >
                     <option value="">-- Select Your Gender --</option>
@@ -100,6 +111,7 @@
                   class="form-control"
                   placeholder="Insert Your Age here"
                   id="age"
+                  name="age"
                   required
                 />
               </div>
@@ -109,24 +121,24 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
-                  >Grade *</label
-                >
+                <label for="grade" class="form-label heading-1">Grade *</label>
                 <div class="input-group">
                   <span class="input-group-text" id="select">Options</span>
                   <select
                     class="form-select"
                     aria-label="Default select"
                     aria-describedby="select"
+                    id="grade"
+                    name="grade"
                     required
                   >
                     <option value="">-- Choose your Grade --</option>
-                    <option value="g5">Grade 5</option>
-                    <option value="g6">Grade 6</option>
-                    <option value="g7">Grade 7</option>
-                    <option value="g8">Grade 8</option>
-                    <option value="g9">Grade 9</option>
-                    <option value="g10">Grade 10</option>
+                    <option value="Grade 5">Grade 5</option>
+                    <option value="Grade 6">Grade 6</option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
                   </select>
                 </div>
               </div>
@@ -136,7 +148,7 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
+                <label for="dept" class="form-label heading-1"
                   >Department *</label
                 >
                 <div class="input-group">
@@ -145,12 +157,14 @@
                     class="form-select"
                     aria-label="Default select"
                     aria-describedby="select"
+                    name="dept"
+                    id="dept"
                     required
                   >
                     <option value="">-- Select Department --</option>
-                    <option value="male">Science and technology</option>
-                    <option value="female">Computer</option>
-                    <option value="female">Both</option>
+                    <option value="Science and Technolgy">Science and technology</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Both">Both</option>
                   </select>
                 </div>
               </div>
@@ -160,16 +174,18 @@
           <div class="d-flex justify-content-center">
             <div class="col-10 col-sm-6 col-md-6 col-lg-6">
               <div class="mb-3">
-                <label for="inputSelect" class="form-label heading-1"
+                <label for="idea" class="form-label heading-1"
                   >የፈጠራ ስራ ለመስራት ያቀዳቹት *</label
                 >
-                <input
-                  type="textbox"
+                <textarea
+                  rows="3"
+                  id="idea"
+                  cols="20"
                   class="form-control"
-                  placeholder="shortly about you idea"
-                  id="input-name"
-                  required
-                />
+                  name="idea"
+                >Enter ideas here...
+               </textarea
+                >
               </div>
             </div>
           </div>
