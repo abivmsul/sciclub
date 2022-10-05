@@ -18,7 +18,6 @@ def register(request):
       # grade = request.POST.get('grade')
       # department = request.POST.get('dept')
       # idea = request.POST.get('idea')
-
       student = Student.objects.create()    
       student.fname = request.POST.get('fname')
       student.lname = request.POST.get('lname')
