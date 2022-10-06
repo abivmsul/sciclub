@@ -1,0 +1,303 @@
+body {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  line-height: 1;
+  background-color: #0a192f;
+  color: #8892b0;
+  overflow-x: hidden;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 20px;
+  color: #fff; }
+
+.custom-table {
+  min-width: 900px; }
+  .custom-table thead tr, .custom-table thead th {
+    padding-bottom: 30px;
+    border-top: none;
+    border-bottom: none !important;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .2rem; }
+  .custom-table tbody th, .custom-table tbody td {
+    color: #777;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: 300;
+    border: none;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    .custom-table tbody th small, .custom-table tbody td small {
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 300; }
+    .custom-table tbody th a, .custom-table tbody td a {
+      color: rgba(255, 255, 255, 0.3); }
+    .custom-table tbody th .more, .custom-table tbody td .more {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .2rem; }
+  .custom-table tbody tr {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    .custom-table tbody tr:hover td, .custom-table tbody tr:focus td {
+      color: #fff; }
+      .custom-table tbody tr:hover td a, .custom-table tbody tr:focus td a {
+        color: #fdd114; }
+      .custom-table tbody tr:hover td .more, .custom-table tbody tr:focus td .more {
+        color: #fdd114; }
+  .custom-table .td-box-wrap {
+    padding: 0; }
+  .custom-table .box {
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+    .custom-table .box td, .custom-table .box th {
+      border: none !important; }
+
+
+      
+.containerr {
+  /* 1140px */
+  max-width: 99rem;
+  /* background-color: rgb(243, 227, 227); */
+  /* border: #64ffda 2px solid; */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  /* font-weight: 600; */
+  padding: 1.6rem 4.2rem;
+  border-radius: 6px;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+.btn-link:link,
+.btn-link:visited {
+  background-color: transparent;
+  color: aquamarine;
+  border: 1px solid #64ffda;
+}
+
+.btn-link:hover,
+.btn-link:active {
+  background-color: #64ffdb23;
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
+  /* box-shadow: inset 0 0 0 3px #fff; */
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161f3c;
+
+  /* Because we want header to be sticky later */
+  height: 8rem;
+  padding: 1.2rem 4.8rem 0 10rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+.logo {
+  height: 10rem;
+}
+.main-nav {
+  color: #ccd6f6;
+}
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #ccd6f6;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #64ffda;
+}
+
+.main-nav-link.nav-resume:link,
+.main-nav-link.nav-resume:visited {
+  border: 1px solid #64ffda;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+}
+.main-nav-link.nav-resume:hover,
+.main-nav-link.nav-resume:active {
+  background-color: #64ffdb23;
+}
+.nav-number {
+  color: #64ffda;
+  font-weight: 500;
+}
+
+.left-side-nav {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 7rem;
+  right: auto;
+  z-index: 10;
+}
+.right-side-nav a {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #ccd6f6a2;
+  transition: all 0.4s;
+}
+.right-side-nav {
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 10rem;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 5rem;
+  z-index: 10;
+}
+.right-side-nav::after {
+  content: "";
+  position: relative;
+  left: auto;
+  background-color: #ccd6f6;
+  width: 0.03rem;
+  height: 12rem;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.social-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #ccd6f6;
+  transition: all 0.4s;
+}
+.social-icon:hover,
+.right-side-nav a:hover {
+  transform: translateY(-0.3rem);
+  color: #64ffda;
+}
+
+.social-links.left::after {
+  content: "";
+  position: relative;
+  left: 8px;
+  background-color: #ccd6f6;
+  width: 0.15rem;
+  height: 12rem;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #64ffda;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+} 
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color:  #161f3c;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}

@@ -37,5 +37,26 @@ def register(request):
   return render(request, 'register.html')
 
 
-def students(request):
-  return render(request, 'students.html')
+def sciclub(request):
+  page = 'sci'
+  sci = Student.objects.filter(department= 'Science and Technolgy')
+  total = Student.objects.filter(department= 'Science and Technolgy').count()
+  context = { 'sci':sci, 'total':total , 'page': page}
+  return render(request, 'students.html',context)
+
+
+def comclub(request):
+  page = 'com'
+  com = Student.objects.filter(department= 'Computer')
+  total = Student.objects.filter(department= 'Computer').count()
+  context = { 'com':com, 'total':total , 'page': page}
+  return render(request, 'students.html',context)
+
+def coordinator(request):
+  sci = Student.objects.filter(department= 'Science and Technolgy').count()
+  com = Student.objects.filter(department= 'Computer').count()
+  both = Student.objects.filter(department= 'Both').count()
+  total = Student.objects.all().count()
+  context = {'sci':sci, 'com':com, 'total':total , 'both':both}
+  return render(request, 'coordinator.html',context)
+

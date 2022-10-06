@@ -1,24 +1,138 @@
-<!DOCTYPE html>
+{% load static%}
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrapp.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/stylee.css' %}">
+    <!-- <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" /> -->
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Students</title>
+  </head>
+  <body>
+  
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <div class="content">
+    
+    <div class="container">
+      {% if page == 'sci' %}
+      <h2 class="mb-5">Science And Technolgy Members</h2>
+      
 
-<div class="container-fluid">
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p>
-</div>
+      <div class="table-responsive">
 
-</body>
+        <table class="table table-striped custom-table">
+          <thead>
+           
+            <tr>
+              
+              <th scope="col">Order</th>
+              <th scope="col">Name</th>
+              <th scope="col">Occupation</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Education</th>
+              <th scope="col">Project Idea</th>
+              <th scope="col"></th>
+            </tr>
+            
+            
+          </thead>
+          <tbody>
+            {% for stu in sci %}
+            <tr scope="row">
+              <td>
+                1392
+              </td>
+              <td><a href="#">{{stu.fname}}</a></td>
+              <td>
+                {{stu.mname}}
+                
+              </td>
+              <td>{{stu.grade}}</td>
+              <td>{{stu.department}}</td>
+              <td>{{stu.idea}}</td>
+              <td><a href="#" class="more">Details</a></td>
+    
+    </tr>
+            {%empty%}    
+                <tr>
+                    <td colspan='5'>There are no Students</td>
+                </tr>   
+               
+            
+            {%endfor%}
+            
+            
+          </tbody>
+        </table>
+      </div>
+      {%elif page == 'com' %}
+      <h2 class="mb-5">Computer club Members</h2>
+      <div class="table-responsive">
+
+        <table class="table table-striped custom-table">
+          <thead>
+           
+            <tr>
+              
+              <th scope="col">Order</th>
+              <th scope="col">Name</th>
+              <th scope="col">Occupation</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Education</th>
+              <th scope="col">Project Idea</th>
+              <th scope="col"></th>
+            </tr>
+           
+            
+          </thead>
+          <tbody>
+            {% for stu in com %}
+            <tr scope="row">
+                      <td>
+                        1392
+                      </td>
+                      <td><a href="#">{{stu.fname}}</a></td>
+                      <td>
+                        {{stu.mname}}
+                        
+                      </td>
+                      <td>{{stu.grade}}</td>
+                      <td>{{stu.department}}</td>
+                      <td>{{stu.idea}}</td>
+                      <td><a href="#" class="more">Details</a></td>
+            
+            </tr>
+            {%empty%}    
+                <tr>
+                    <td colspan='5'>There are no Students</td>
+                </tr>   
+               
+            
+            {%endfor%}
+            
+            
+          </tbody>
+        </table>
+      </div>
+      {%endif%}
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

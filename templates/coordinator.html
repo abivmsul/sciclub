@@ -1,0 +1,161 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      href="{% static 'img/icon-01.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/general.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/queries.css' %}" />
+
+    <script defer src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="">
+        <img class="logo" src="{% static 'img/logo-02.png' %}" alt="" />
+      </a>
+      <nav class="main-nav">
+        <ol class="main-nav-list">
+    
+            <a class="main-nav-link" href="#coordinator"
+              ><span class="nav-number">Welcome</span> {{user}}</a
+            >
+          </li>
+          <li>
+            <a class="main-nav-link nav-resume" href="{% url 'logout' %}"
+              >Logout</a
+            >
+          </li>
+        </ol>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <section class="section-department" id="department">
+      <div class="containerr">
+        {% include '_partials.html' %}
+
+        <h2 class="number-heading">
+          <span class="nav-number"></span> Department Members
+        </h2>
+        <div class="containerr grid grid--2-cols margin-bottom-md">
+          <a href="{% url 'sciclub' %}" class="main-nav-link"
+            ><div class="dept">
+              <div class="dept-content">
+                <p class="feature-title">
+                  <ion-icon
+                    class="dept-icon"
+                    name="thermometer-outline"
+                  ></ion-icon
+                  >Science & Technolgy Members "<span class="nav-number">{{sci}}</span>"
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="{% url 'comclub' %}" class="main-nav-link">
+            <div class="dept">
+              <div class="dept-content">
+                <p class="feature-title">
+                  <ion-icon
+                    class="dept-icon"
+                    name="code-slash-outline"
+                  ></ion-icon>
+                  Computer Programming Members "<span class="nav-number">{{com}}</span>"
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="" class="main-nav-link"
+            ><div class="dept">
+              <div class="dept-content">
+                <p class="feature-title">
+                  BothScience & Technolgy And Computer Members "<span class="nav-number">{{both}}</span>"
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-register" id="register">
+      
+      <div class="contact-me-containerr">
+        <h2 class="sub-title">Total</h2>
+
+        <h2 class="contact-title">Members Of The Club</h2>
+        <a href="" class="btn btn-link"> {{total}}</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="flex">
+        <div class="logo-col">
+          <a href="" class="footer-logo">
+            <img class="logo" src="{% static 'img/logo-02.png' %}" alt="" />
+          </a>
+
+          <p class="copyright">Copyright &copy; 2022 abivmsul.</p>
+        </div>
+        <!-- <nav class="nav-col">
+        <p class="footer-heading">Company</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">About Omnifood</a></li>
+          <li><a class="footer-link" href="#">For Business</a></li>
+          <li><a class="footer-link" href="#">Cooking partners</a></li>
+          <li><a class="footer-link" href="#">Careers</a></li>
+        </ul>
+      </nav> -->
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+  </body>
+</html>
