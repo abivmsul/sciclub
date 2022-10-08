@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Coordinator</title>
     <link
       rel="icon"
       href="{% static 'img/icon-01.ico' %}"
@@ -24,7 +24,17 @@
       </a>
       <nav class="main-nav">
         <ol class="main-nav-list">
-    
+          <li>
+            <a class="main-nav-link" href="{% url 'asciclub' %}"
+              ><span class="nav-number">01</span> Accepted Members of Science</a
+            >
+          </li>
+          <li>
+            <a class="main-nav-link" href="{% url 'acomclub' %}"
+              ><span class="nav-number">02</span> Accepted Members of Computer</a
+            >
+          </li>
+          <li>
             <a class="main-nav-link" href="#coordinator"
               ><span class="nav-number">Welcome</span> {{user}}</a
             >
@@ -95,7 +105,7 @@
       <div class="contact-me-containerr">
         <h2 class="sub-title">Total</h2>
 
-        <h2 class="contact-title">Members Of The Club</h2>
+        <h2 class="contact-title">Registered Members of the club</h2>
         <a href="" class="btn btn-link"> {{total}}</a>
       </div>
     </section>

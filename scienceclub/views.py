@@ -60,3 +60,25 @@ def coordinator(request):
   context = {'sci':sci, 'com':com, 'total':total , 'both':both}
   return render(request, 'coordinator.html',context)
 
+def accept (request,pk):
+  stu= Student.objects.get(id=pk)
+  stu.accepted = True
+  stu.save()
+  messages.success(request, 'Thank You, You have Accepted The Student To Become A Memmber')
+  next = request.GET.get('next', '/')
+  return redirect(next)
+
+def asciclub(request):
+  page = 'sci'
+  sci = Student.objects.filter(department= 'Science and Technolgy', accepted=True)
+  total = Student.objects.filter(department= 'Science and Technolgy', accepted=True).count()
+  context = { 'sci':sci, 'total':total , 'page': page}
+  return render(request, 'accepted.html',context)
+
+
+def acomclub(request):
+  page = 'com'
+  com = Student.objects.filter(department= 'Computer', accepted=True)
+  total = Student.objects.filter(department= 'Computer', accepted=True).count()
+  context = { 'com':com, 'total':total , 'page': page}
+  return render(request, 'accepted.html',context)

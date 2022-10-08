@@ -42,7 +42,7 @@ body {
   /* font-weight: 600; */
   padding: 1.6rem 4.2rem;
   border-radius: 6px;
-
+margin-bottom: 2rem;
   /* Only necessary for .btn */
   border: none;
   cursor: pointer;

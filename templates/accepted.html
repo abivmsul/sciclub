@@ -38,7 +38,7 @@
                 <th scope="col">Club</th>
                 <th scope="col">Project Idea</th>
                 <th scope="col">Status</th>
-                <th scope="col">Action</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -51,15 +51,6 @@
                 <td>{{stu.department}}</td>
                 <td>{{stu.idea}}</td>
                 <td align="center" >{% if stu.accepted %} Accepted {%else%} - {%endif%}</td>
-                <td align="center" class="btn">
-                  {% if stu.accepted %}
-                  -
-                  {%else%}  
-                  <a href="#" class=""
-                    ><ion-icon  class="dept" name="checkmark-circle"></ion-icon
-                  ></a>
-                  {%endif%}
-                </td>
               </tr>
               {%empty%}
               <tr>
@@ -83,7 +74,7 @@
                 <th scope="col">Club</th>
                 <th scope="col">Project Idea</th>
                 <th scope="col">Status</th>
-                <th scope="col">Action</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -96,16 +87,7 @@
                 <td>{{stu.department}}</td>
                 <td>{{stu.idea}}</td>
                 <td align="center">{% if stu.accepted %} Accepted {%else%} - {%endif%}</td>
-                <td align="center" class="btn">
-                  {% if stu.accepted %}
-                  -
-                  
-                  {%else%}  
-                  <a href="{% url 'accept' stu.id %}?next={{ request.path|urlencode }}" class=" "
-                    ><ion-icon  class="dept" name="checkmark-circle"></ion-icon
-                  ></a>
-                  {%endif%}
-                </td>
+               
               </tr>
               {%empty%}
               <tr>
@@ -117,7 +99,7 @@
           </table>
         </div>
         {%endif%}
-        <a href="{% url 'coordinator' %}" class="btn btn-outline-info">Back</a>
+        <!-- <a href="{% url 'coordinator' %}" class="btn btn-outline-info ">Back</a> -->
       </div>
     </div>
     
