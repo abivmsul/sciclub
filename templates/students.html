@@ -17,8 +17,12 @@
     <!-- <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" /> -->
-
-    <title>Students</title>
+    <link
+    rel="icon"
+    href="{% static 'img/icon-01.ico' %}"
+    type="image/x-icon"
+    />
+    <title>Members</title>
   </head>
   <body>
     <div class="content">
@@ -55,7 +59,7 @@
                   {% if stu.accepted %}
                   -
                   {%else%}  
-                  <a href="#" class=""
+                  <a href="{% url 'accept' stu.id %}?next={{ request.path|urlencode }}" class=""
                     ><ion-icon  class="dept" name="checkmark-circle"></ion-icon
                   ></a>
                   {%endif%}
